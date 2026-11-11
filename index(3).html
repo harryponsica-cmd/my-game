@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b1c">
+  <meta name="description" content="Harry Ponsica — Grade 9 Felipe. A futuristic portfolio about the art of game development.">
+  <title>The Art of Game Development | Harry Ponsica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="loader" id="loader" aria-label="Loading website">
+    <div class="loader-mark">HP<span>_</span></div>
+    <p>INITIALIZING CREATIVE UNIVERSE</p>
+    <div class="loader-track"><span></span></div>
+    <small>DESIGNED &amp; DEVELOPED BY HARRY PONSICA</small>
+  </div>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Harry Ponsica home"><span class="brand-icon">H</span><span>HARRY<span class="brand-dot">.</span>DEV</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="#home" class="nav-link active">HOME</a>
+      <a href="#about" class="nav-link">ABOUT</a>
+      <a href="#universe" class="nav-link">MY UNIVERSE</a>
+      <a href="#showcase" class="nav-link">SHOWCASE</a>
+      <a href="#effects" class="nav-link">EFFECTS</a>
+    </nav>
+    <button class="sound-toggle" id="soundToggle" aria-pressed="false"><span class="sound-icon">♫</span><span id="soundLabel">SOUND OFF</span></button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-grid"></div>
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> GAME DEVELOPER IN THE MAKING</div>
+        <h1 class="hero-title" id="heroTitle" aria-label="MY WORLD, MY GAME.">MY WORLD,<br><span>MY GAME.</span></h1>
+        <p class="hero-subtitle">Turning imagination into <span>interactive experiences.</span></p>
+        <div class="creator-line">
+          <span class="creator-label">CREATED BY</span>
+          <strong class="creator-name">HARRY PONSICA</strong>
+          <span class="creator-grade">GRADE 9 — FELIPE</span>
+        </div>
+        <p class="hero-description">My favorite hobby is creating games. I enjoy designing creative worlds, building characters, solving coding challenges, and transforming ideas into playable experiences.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#universe">EXPLORE MY WORLD <span>↗</span></a>
+          <a class="button button-ghost" href="#about">DISCOVER MY HOBBY <span>↓</span></a>
+        </div>
+        <div class="hero-footnote"><span>01 / 05</span><span class="footnote-line"></span><span>SCROLL TO EXPLORE</span></div>
+      </div>
+
+      <div class="hero-art reveal" aria-label="Futuristic pixel game portal illustration">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="portal">
+          <div class="portal-inner">
+            <div class="pixel-sun"></div>
+            <div class="pixel-mountain mountain-back"></div>
+            <div class="pixel-mountain mountain-front"></div>
+            <div class="pixel-platform"></div>
+            <div class="pixel-player"><i></i><b></b></div>
+            <div class="portal-scan"></div>
+          </div>
+        </div>
+        <div class="float-chip chip-code"><span>&lt;/&gt;</span><small>CODE</small></div>
+        <div class="float-chip chip-play"><span>▶</span><small>PLAY</small></div>
+        <div class="float-chip chip-create"><span>✦</span><small>CREATE</small></div>
+        <div class="art-caption"><span class="caption-pulse"></span> YOUR NEXT WORLD STARTS HERE</div>
+      </div>
+      <div class="hero-bottom"><span>DESIGNED &amp; DEVELOPED BY HARRY PONSICA</span><span>CREATIVITY × CODE × PLAY</span></div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading reveal">
+        <div class="eyebrow">01 — THE REASON I CREATE</div>
+        <h2>MORE THAN JUST <span>PLAYING.</span></h2>
+        <p>Creating games is more than just a hobby for me. It allows me to express my imagination, creativity, and passion for technology.</p>
+      </div>
+      <div class="about-grid">
+        <article class="feature-card reveal">
+          <div class="card-number">01</div><div class="feature-icon icon-imagination">✧</div>
+          <h3>IMAGINATION</h3><p>I love creating unique ideas, characters, stories, and worlds.</p>
+          <div class="card-bottom"><span>IDEAS INTO WORLDS</span><span>↗</span></div>
+        </article>
+        <article class="feature-card reveal">
+          <div class="card-number">02</div><div class="feature-icon icon-creativity">◈</div>
+          <h3>CREATIVITY</h3><p>Game development lets me express creativity through design, animation, and interactive experiences.</p>
+          <div class="card-bottom"><span>DESIGN WITH PURPOSE</span><span>↗</span></div>
+        </article>
+        <article class="feature-card reveal">
+          <div class="card-number">03</div><div class="feature-icon icon-coding">&lt;/&gt;</div>
+          <h3>CODING</h3><p>I enjoy learning programming languages and discovering how code can bring a game to life.</p>
+          <div class="card-bottom"><span>BUILD WITH CODE</span><span>↗</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section universe-section" id="universe">
+      <div class="section-heading reveal">
+        <div class="eyebrow">02 — WORLDS I WANT TO BUILD</div>
+        <h2>EXPLORE MY CREATIVE <span>UNIVERSE.</span></h2>
+        <p>Different genres, different challenges — every game begins with an idea.</p>
+      </div>
+      <div class="genre-grid">
+        <article class="genre-card genre-pixel reveal"><div class="genre-art pixel-art"><span class="pixel-cloud"></span><span class="pixel-tree"></span><span class="pixel-hero"></span><span class="pixel-ground"></span></div><div class="genre-info"><span>GENRE 01</span><h3>PIXEL-ART ADVENTURES</h3><p>Small pixels, huge adventures, and charming worlds to explore.</p></div><b class="genre-arrow">↗</b></article>
+        <article class="genre-card genre-rpg reveal"><div class="genre-art rpg-art"><span class="rpg-moon"></span><span class="rpg-sword">⚔</span><span class="rpg-stars">✦　·　✧</span></div><div class="genre-info"><span>GENRE 02</span><h3>RPG GAMES</h3><p>Build characters, make choices, and discover stories.</p></div><b class="genre-arrow">↗</b></article>
+        <article class="genre-card genre-puzzle reveal"><div class="genre-art puzzle-art"><span>?</span><i>◇</i><b>+</b><em>□</em></div><div class="genre-info"><span>GENRE 03</span><h3>PUZZLE GAMES</h3><p>Creative challenges that make players think in new ways.</p></div><b class="genre-arrow">↗</b></article>
+        <article class="genre-card genre-platform reveal"><div class="genre-art platform-art"><span class="platform-ball"></span><i></i><b></b><em></em></div><div class="genre-info"><span>GENRE 04</span><h3>PLATFORMER GAMES</h3><p>Jump, move, explore, and master every level.</p></div><b class="genre-arrow">↗</b></article>
+        <article class="genre-card genre-edu reveal"><div class="genre-art edu-art"><span>&lt;HTML&gt;</span><b>0101</b><i>LEARN</i></div><div class="genre-info"><span>GENRE 05</span><h3>EDUCATIONAL GAMES</h3><p>Turn learning into an experience that feels like play.</p></div><b class="genre-arrow">↗</b></article>
+        <article class="genre-card genre-3d reveal"><div class="genre-art three-art"><span class="cube cube-one"></span><span class="cube cube-two"></span><span class="cube cube-three"></span></div><div class="genre-info"><span>GENRE 06</span><h3>3D EXPLORATION</h3><p>Discover immersive spaces and environments in 3D.</p></div><b class="genre-arrow">↗</b></article>
+      </div>
+    </section>
+
+    <section class="section showcase-section" id="showcase">
+      <div class="section-heading reveal">
+        <div class="eyebrow">03 — A LITTLE PREVIEW</div>
+        <h2>IMAGINE IT. <span>CODE IT. PLAY IT.</span></h2>
+        <p>A tiny fictional game world — a glimpse of what imagination and code can create.</p>
+      </div>
+      <div class="showcase-window reveal">
+        <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>HARRY_ENGINE / WORLD_001</span><span class="window-live">● LIVE PREVIEW</span></div>
+        <div class="showcase-content">
+          <div class="mini-game" id="miniGame">
+            <div class="game-sky"><span class="game-star star-one">✦</span><span class="game-star star-two">✧</span><span class="game-moon"></span><div class="game-cloud cloud-one"></div><div class="game-cloud cloud-two"></div></div>
+            <div class="game-mountain gm-one"></div><div class="game-mountain gm-two"></div>
+            <div class="game-platform platform-one"></div><div class="game-platform platform-two"></div><div class="game-platform platform-three"></div>
+            <div class="game-coin coin-one">✦</div><div class="game-coin coin-two">✦</div>
+            <div class="game-character" id="gameCharacter"><span class="char-eye"></span><span class="char-eye second"></span><span class="char-feet"></span></div>
+            <div class="game-ground"></div>
+            <div class="game-hud"><span>WORLD 001</span><span>★ <b id="coinCount">00</b></span></div>
+            <div class="game-hint" id="gameHint">PRESS PLAY TO START</div>
+          </div>
+          <div class="code-panel">
+            <div class="code-heading"><span>✦</span> GAME_LOGIC.JS <small>● SAVED</small></div>
+            <pre><code><span class="code-purple">const</span> <span class="code-blue">player</span> = {
+  name: <span class="code-green">"Pixel Hero"</span>,
+  energy: <span class="code-orange">100</span>,
+  mission: <span class="code-green">"Explore"</span>
+};
+
+<span class="code-purple">function</span> <span class="code-yellow">createWorld</span>() {
+  <span class="code-blue">world</span>.<span class="code-yellow">load</span>();
+  <span class="code-blue">player</span>.<span class="code-yellow">move</span>();
+  <span class="code-purple">return</span> <span class="code-green">"Adventure begins!"</span>;
+}
+
+<span class="code-yellow">createWorld</span>();</code></pre>
+            <div class="code-footer"><span>HTML5 + CSS3 + JAVASCRIPT</span><span>BUILD 001</span></div>
+          </div>
+        </div>
+        <div class="showcase-controls"><div><span class="live-dot"></span> INTERACTIVE MINI WORLD</div><button class="play-button" id="playGame">▶ PLAY MINI DEMO</button><span class="control-hint">COLLECT THE STARS</span></div>
+      </div>
+    </section>
+
+    <section class="section effects-section" id="effects">
+      <div class="section-heading reveal">
+        <div class="eyebrow">04 — THE DETAILS MATTER</div>
+        <h2>THE MAGIC BEHIND <span>THE DESIGN.</span></h2>
+        <p>Every movement and glow has a purpose: to make the experience feel alive.</p>
+      </div>
+      <div class="effects-grid">
+        <article class="effect-item reveal"><span class="effect-symbol">Aa</span><div><h3>HEADING ANIMATION</h3><p>Letters appear one by one with bouncing and glowing effects.</p></div><span class="effect-index">01</span></article>
+        <article class="effect-item reveal"><span class="effect-symbol">↗</span><div><h3>BUTTON TRANSITION</h3><p>Buttons change color, glow, and scale when hovered or tapped.</p></div><span class="effect-index">02</span></article>
+        <article class="effect-item reveal"><span class="effect-symbol">◌</span><div><h3>IMAGE ANIMATION</h3><p>Illustrations float and move smoothly to add depth.</p></div><span class="effect-index">03</span></article>
+        <article class="effect-item reveal"><span class="effect-symbol">✧</span><div><h3>BACKGROUND ANIMATION</h3><p>Floating particles and glowing gradients create a futuristic atmosphere.</p></div><span class="effect-index">04</span></article>
+        <article class="effect-item reveal"><span class="effect-symbol">▣</span><div><h3>CARD ANIMATION</h3><p>Cards lift, illuminate, and reveal details on hover.</p></div><span class="effect-index">05</span></article>
+        <article class="effect-item reveal"><span class="effect-symbol">⌄</span><div><h3>SCROLL ANIMATION</h3><p>Sections smoothly appear as visitors explore the page.</p></div><span class="effect-index">06</span></article>
+        <article class="effect-item reveal"><span class="effect-symbol">♫</span><div><h3>SOUND EFFECTS</h3><p>Optional soft electronic tones play only after sound is enabled.</p></div><span class="effect-index">07</span></article>
+      </div>
+    </section>
+
+    <section class="closing section">
+      <div class="closing-orb"></div>
+      <div class="eyebrow reveal">THE NEXT LEVEL IS YOURS TO CREATE</div>
+      <h2 class="reveal">DREAM IT.<br><span>BUILD IT.</span></h2>
+      <p class="reveal">Every great game starts with one curious mind and one new idea.</p>
+      <a href="#home" class="button button-primary reveal">BACK TO THE TOP ↑</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-symbol">H<span>✦</span></div>
+    <h2>CREATED WITH CREATIVITY <span>AND CODE.</span></h2>
+    <p>DESIGNED &amp; DEVELOPED BY <strong>HARRY PONSICA</strong></p>
+    <small>GRADE 9 — FELIPE · THE ART OF GAME DEVELOPMENT</small>
+    <div class="footer-bottom"><span>© 2026 HARRY PONSICA</span><span>MADE OF IMAGINATION + CODE</span></div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
